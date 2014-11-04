@@ -6,7 +6,18 @@ var AppDispatcher = require('../dispatcher');
 var testModel = Backbone.Model.extend({
 
     initialize: function() {
+        var self = this;
         this.dispatchToken = AppDispatcher.register(_.bind(this.dispatchCallback, this));
+
+        // Create a mixin to pass to React components that sets up event listeners
+        this.mixin = {
+            componentDidMount: function() {
+                self.on('change', this._onChange, this);
+            },
+            componentWillUnmount: function() {
+                self.off('change', this._onChange, this);
+            }
+        };
     },
 
     defaults: {
@@ -23,6 +34,6 @@ var testModel = Backbone.Model.extend({
 
 });
 
-var TestStore = new testModel();
+var TestModel = new testModel();
 
-module.exports = TestStore;
+module.exports = TestModel;

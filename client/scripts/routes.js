@@ -5,7 +5,7 @@
 'use strict';
 
 var React = require('react');
-var MainComponent = require('./components/main.jsx');
+var MainComponent = React.createFactory(require('./components/main.jsx'));
 
 
 var MainRouter = Backbone.Router.extend({
@@ -15,7 +15,7 @@ var MainRouter = Backbone.Router.extend({
     },
 
     main: function() {
-        React.renderComponent(new MainComponent(), document.getElementById('app-wrapper'));
+        React.render(new MainComponent(), document.getElementById('app-wrapper'));
     }
 });
 

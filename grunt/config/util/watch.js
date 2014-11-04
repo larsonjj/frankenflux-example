@@ -46,6 +46,7 @@ var taskConfig = function(grunt) {
             ],
             tasks: [
                 'newer:jshint',
+                'browserify:server',
                 'exorcise:server',
                 'newer:copy:server'
             ]
@@ -53,6 +54,7 @@ var taskConfig = function(grunt) {
         react: {
             files: ['<%= yeogurt.client %>/scripts/components/**/*.jsx'],
             tasks: [
+                'browserify:server',
                 'exorcise:server'
             ]
         },
@@ -81,10 +83,10 @@ var taskConfig = function(grunt) {
             ]
         }
     };
-    
+
 
     grunt.config.set('watch', config);
-    
+
 
 };
 
