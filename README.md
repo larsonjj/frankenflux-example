@@ -27,7 +27,12 @@ This will make sure you get all the necessary dependencies.
 
 # Usage
 
+## Development
 Boot up the application by running `grunt serve`
+
+## Production
+Build a production version of the app using `grunt build`.
+Production files will be found in the `dist` folder once build completes
 
 # Technology Used
 
