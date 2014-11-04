@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>FrankenFlux App</title>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Mount React Application Here -->
+        <div id="app-wrapper"></div>
+
+        <!--[if lt IE 9]>
+        <script src="/bower_components/es5-shim/es5-shim.js"></script>
+        <script src="/bower_components/es5-shim/es5-sham.js"></script>
+        <![endif]-->
+
+
+        <!-- build:js(client) scripts/global.js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/lodash/dist/lodash.js"></script>
+        <script src="/bower_components/backbone/backbone.js"></script>
+        <!-- endbuild -->
+
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>

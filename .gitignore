@@ -1,0 +1,10 @@
+node_modules
+*.log
+dist
+.ftppass
+client/bower_components
+client/.serve
+.tmp
+.grunt
+.DS_Store
+.yo-rc.json
