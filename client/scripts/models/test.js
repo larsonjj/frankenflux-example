@@ -7,6 +7,8 @@ var testModel = Backbone.Model.extend({
 
     initialize: function() {
         var self = this;
+        
+        // Register the callback function that will run when calling AppDispatcher.dispatch()
         this.dispatchToken = AppDispatcher.register(_.bind(this.dispatchCallback, this));
 
         // Create a mixin to pass to React components that sets up event listeners
