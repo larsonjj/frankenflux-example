@@ -44,7 +44,6 @@ var MainComponent = React.createClass({
     },
     // Defined in TestModel.mixin
     _onChange: function() {
-        console.log('testing');
         this.setState({
             inputText: TestModel.get('inputText')
         });
